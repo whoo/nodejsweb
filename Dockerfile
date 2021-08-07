@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3
 MAINTAINER Dominique DERRIER <derrierdo@gmail.com>
 RUN apk update && apk upgrade && apk add nodejs && rm -rf /var/cache/apk/*
 RUN mkdir /target && cd /target && npm install http-server && npm cache clean
